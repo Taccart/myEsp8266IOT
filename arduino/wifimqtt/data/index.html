@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html
+><head>
+    <script src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+</head>
+<body onload="refreshData();">
+    <fieldset>
+    <legend>This board exposes two REST services:</legend>
+        <ul><li><a href="./metrics">/metrics</a></li><li><a href="./status">/status</a></li></ul>
+    </fieldset>
+    <fieldset>
+        <legend class="collapsible">Metrics </legend>
+        <table>
+            <thead><th>key</th><th>value</th></thead>
+            <tbody id="metricList"></tbody>
+    </table>
+    </fieldset>
+</div>
+    </fieldset>
+
+    <fieldset>
+        <legend class="collapsible">Statuses</legend>
+        <div style="display: none;">
+            <fieldset>
+                <legend class="collapsible">Setup</legend>
+                <div>
+                    <label for="espResetReason">Last reset reason:</label><span id="espResetReason"></span><br />
+                    <label for="readConfigStatus">Configuration:</label><span id="readConfigStatus"></span><br />
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend class="collapsible">Loop</legend>
+                <div>
+                    <label for="sdsStartLast">sds - last start:</label><span id="sdsStartLast"></span><br />
+                    <label for="sdsEndLast">sds - last end:</label><span id="sdsEndLast"></span><br />
+                    <label for="sdsLastQueryPM">sds - last query:</label><span id="sdsLastQueryPM"></span><br />
+                    <label for="sdsLastStatus">sds - last status:</label><span id="sdsLastStatus"></span><br />
+                    <label for="sdsStartTotal">sds - total:</label><span id="sdsStartTotal"></span><br />
+                    <label for="mqttPubLastStart">mqtt - publish last start:</label><span
+                        id="mqttPubLastStart"></span><br />
+                    <label for="mqttPubLastEnd">mqtt - publish last end:</label><span id="mqttPubLastEnd"></span><br />
+                </div>
+            </fieldset>
+
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend class="collapsible">Settings</legend>
+        <div style="display: none;">
+            <fieldset>
+                <legend class="collapsible">Wifi</legend>
+                <div class="content">
+                    <div>
+                        <label for="wifiSSID">wifi - SSID:</label><span id="wifiSSID"></span><br />
+                        <label for="wifiStatus">wifi - status:</label><span id="wifiStatus"></span><br /></div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend class="collapsible">MQTT</legend>
+                <div>
+                    <label for="mqttConnServer">Server:</label><span id="mqttConnServer"></span><br />
+                    <label for="mqttConnPort">Port:</label><span id="mqttConnPort"></span><br />
+                    <label for="mqttPubPrefix">Publish topic (root):</label><span id="mqttPubPrefix"></span><br />
+                    <label for="mqttPubTotal">Publish total:</label><span id="mqttPubTotal"></span><br />
+                    <label for="mqttPubSleep">Publish Sleep:</label><span id="mqttPubSleep"></span><br />
+                    <label for="mqttSubPrefix">Subscribe topic (root):</label><span id="mqttSubPrefix"></span><br />
+                    <label for="mqttSubTotal">Subscribe total:</label><span id="mqttSubTotal"></span><br />
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend class="collapsible">Sensors</legend>
+                <div>
+                    <label for="sensorCollectSleep">Metrics collection sleep:</label><span
+                        id="sensorCollectSleep"></span><br />
+                </div>
+            </fieldset>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend class="collapsible">Board</legend>
+        <div style="display: none;">
+            <label for="espChipId">Chip id</label>:<span id="espChipId"></span><br />
+            <label for="espCpuFreqMHz">Cpu freqency (MHz)</label>:<span id="espCpuFreqMHz"></span><br />
+            <label for="espCoreVersion">Core version</label>:<span id="espCoreVersion"></span><br />
+            <label for="espSdkVersion">Sdk version</label>:<span id="espSdkVersion"></span><br />
+            <label for="espSketchSize">Sketch size</label>:<span id="espSketchSize"></span><br />
+            <label for="espFreeSketchSpace">Free setch space</label>:<span id="espFreeSketchSpace"></span><br />
+            <label for="espMaxFreeBlockSize">Max free block size</label>:<span id="espMaxFreeBlockSize"></span><br />
+            <label for="espHeapFragmentation">Heap fragmentation</label>:<span id="espHeapFragmentation"></span><br />
+            <label for="espFreeHeap">Free heap</label>:<span id="espFreeHeap"></span><br />
+        </div>
+    </fieldset>
+    <input type="button" onclick="refreshData();" value="refresh" />
+    <script>
+        setCollapsibles();
+    </script>
+</body>
+
+</html>

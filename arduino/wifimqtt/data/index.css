@@ -1,0 +1,9 @@
+body {background-color: black;font-family: monospace;}
+span {display: inline-block;color: chartreuse; }
+label {display: inline-block;color: darkgreen;font-size: smaller;width: 20em;}
+legend { background-color: black;color: chartreuse;display: inline-block;font-size: x-small;padding-left: .5em;padding-top: .5em;padding-right: .5em;        }
+fieldset {border-color: darkgreen;position:relative;}
+input {background-color: darkgreen;  color:chartreuse;}
+p, a{color: darkslategray; }
+table {color: darkgreen;font-size: xx-small;}
+tbody {color: gold;}
