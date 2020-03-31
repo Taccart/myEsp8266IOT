@@ -43,8 +43,8 @@
 /*
    SENSORS NAMES KEYS AND UNITS
 */
-#define UNIT_MILLISECONDS "ms"
-#define UNIT_PM "μg per m³"
+#define UNIT_MILLISECONDS "s"
+#define UNIT_PM "μg_per_m³"
 #define UNIT_PASCAL "Pa"
 #define UNIT_CELCIUS "C"
 #define KEY_UPTIME "uptime"
@@ -192,7 +192,9 @@ void handleStatus() {
   server.send(200, CONTENT_TYPE_JSON, output);
 }
 void handleMetrics() {
-  jsonMetrics["millis"] = millis();
+#if IS_DEBUG
+  jsonStatus["millis"] = millis();
+#endif
   String output;
   jsonMetrics.printTo(output);
   server.send(200, CONTENT_TYPE_JSON, output);
