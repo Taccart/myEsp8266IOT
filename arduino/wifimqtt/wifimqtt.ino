@@ -44,6 +44,7 @@
 /*
    SENSORS NAMES KEYS AND UNITS
 */
+<<<<<<< HEAD
 #define UNIT_MILLISECONDS "second"
 #define UNIT_PM           "μg_per_m³"
 #define UNIT_PASCAL       "Pascal"
@@ -63,6 +64,25 @@
 #define AP_MODE_PASSWORD  "thing-setup"
 
 #define CONFIGURATION_FILE "/config.json"
+=======
+#define UNIT_MILLISECONDS "s"
+#define UNIT_PM "μg_per_m³"
+#define UNIT_PASCAL "Pa"
+#define UNIT_CELCIUS "C"
+#define KEY_UPTIME "uptime"
+#define KEY_PM25 "pm2.5"
+#define KEY_PM10 "pm10"
+#define KEY_PASCAL "press"
+#define KEY_CELCIUS "temp"
+#define SENSOR_SDS "sds011"
+#define SENSOR_BMP280 "bmp280"
+#define SENSOR_ESP "esp"
+/*
+   WIFI
+*/
+#define AP_MODE_SSID "thing-setup"
+#define AP_MODE_PASSWORD "thing-setup"
+>>>>>>> 874380c71384ff1c8d6d9f388559caf6328249a6
 
 #define WEB_SERVER_PORT 8888
 #define CONTENT_TYPE_JSON "application/json"
